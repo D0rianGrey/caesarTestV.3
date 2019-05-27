@@ -1,0 +1,57 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Caesar Regression Suite" verbose="1">
+
+    <test name="as teacher">
+        <parameter name="login" value="sasha"/>
+        <parameter name="password" value="1234"/>
+        <packages>
+            <package name="softserve.academy.admin"/>
+        </packages>
+    </test>
+
+    <test name="as teacher (LocationsMW bugs)">
+        <parameter name="login" value="sasha"/>
+        <parameter name="password" value="1234"/>
+        <classes>
+            <class name="softserve.academy.teacher.SelectLocationModalWindowTest">
+                <methods>
+                    <include name="cancelChangesWithEscPress"/>
+                    <include name="displayGroupsOfChosenLocationByDoubleClick"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!--<test name="as coordinator">-->
+    <!--<parameter name="login" value="taras"/>-->
+    <!--<parameter name="password" value="1234"/>-->
+    <!--<packages>-->
+    <!--<package name="softserve.academy.coordinator"/>-->
+    <!--</packages>-->
+    <!--</test>-->
+
+    <!--<test name="as coordinator (LocationsMW bugs)">-->
+    <!--<parameter name="login" value="taras"/>-->
+    <!--<parameter name="password" value="1234"/>-->
+    <!--<packages>-->
+    <!--<package name="softserve.academy.coordinator"/>-->
+    <!--</packages>-->
+    <!--</test>-->
+
+    <!--<test name="as admin">-->
+    <!--<parameter name="login" value="dmytro"/>-->
+    <!--<parameter name="password" value="1234"/>-->
+    <!--<packages>-->
+    <!--<package name="softserve.academy.admin"/>-->
+    <!--</packages>-->
+    <!--</test>-->
+
+    <!--<test name="as admin (LocationsMW bugs)">-->
+    <!--<parameter name="login" value="dmytro"/>-->
+    <!--<parameter name="password" value="1234"/>-->
+    <!--<packages>-->
+    <!--<package name="softserve.academy.admin"/>-->
+    <!--</packages>-->
+    <!--</test>-->
+</suite>

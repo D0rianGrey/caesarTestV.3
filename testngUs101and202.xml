@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Caesar Regression Suite" verbose="1">
+
+    <test name="us 202">
+
+        <groups>
+            <run>
+                <include name="schedulePage"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="softserve.academy.us202.AllGroupsButtonFunctionality202Test"/>
+            <class name="softserve.academy.us202.AllGroupsStateButton202Test"/>
+            <class name="softserve.academy.us202.CaptionNameVerifyAbilityToCount"/>
+            <class name="softserve.academy.us202.ConformitySelectedGroupToScheduleTest202Test"/>
+        </classes>
+    </test>
+
+    <test name="tests without login into Caesar 101">
+        <groups>
+            <run>
+                <include name="loginPage"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="softserve.academy.us101.LoginFunctionalityForNotRegistered101Test"/>
+            <class name="softserve.academy.us101.LoginFunctionalityForRegistered101Test"/>
+            <class name="softserve.academy.us101.LoginPageKeyboardEventFunctionality101Test"/>
+            <class name="softserve.academy.us101.ValidationFields101Test"/>
+        </classes>
+    </test>
+</suite>

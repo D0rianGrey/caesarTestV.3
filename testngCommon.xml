@@ -1,0 +1,175 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Caesar Regression Suite" verbose="1">
+
+    <test name="aboutpage">
+        <groups>
+            <run>
+                <!--<include name="ordinary"/>-->
+                <include name="about"/>
+            </run>
+        </groups>
+
+        <classes>
+            <!-- Add your class here -->
+            <!--<class name="softserve.academy.Testt"/>-->
+            <class name="softserve.academy.AboutPageTest"/>
+        </classes>
+    </test>
+
+    <test name="User Story 2-01">
+
+        <parameter name="login" value="sasha"/>
+        <parameter name="password" value="1234"/>
+
+        <groups>
+            <run>
+                <include name="userStory201"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="softserve.academy.Story201Test"/>
+        </classes>
+    </test>
+
+    <test name="Admin">
+        <groups>
+            <run>
+                <include name="ordinaryAdmin"/>
+                <include name="admin"/>
+            </run>
+            <dependencies>
+                <group name="funcCreate" depends-on="smoke"/>
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="softserve.academy.AdminTests.AdminSmokeTest"/>
+            <class name="softserve.academy.AdminTests.AdminCreateTest"/>
+        </classes>
+    </test>
+
+    <test name="AdminEdit">
+        <classes>
+            <class name="softserve.academy.AdminTests.AdminEditTest"/>
+        </classes>
+    </test>
+
+    <test name="us 202">
+
+        <groups>
+            <run>
+                <include name="schedulePage"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="softserve.academy.us202.AllGroupsButtonFunctionality202Test"/>
+            <class name="softserve.academy.us202.AllGroupsStateButton202Test"/>
+            <class name="softserve.academy.us202.CaptionNameVerifyAbilityToCount"/>
+            <class name="softserve.academy.us202.ConformitySelectedGroupToScheduleTest202Test"/>
+        </classes>
+    </test>
+
+    <test name="tests without login into Caesar 101">
+        <groups>
+            <run>
+                <include name="loginPage"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="softserve.academy.us101.LoginFunctionalityForNotRegistered101Test"/>
+            <class name="softserve.academy.us101.LoginFunctionalityForRegistered101Test"/>
+            <class name="softserve.academy.us101.LoginPageKeyboardEventFunctionality101Test"/>
+            <class name="softserve.academy.us101.ValidationFields101Test"/>
+        </classes>
+    </test>
+
+    <test name="tests without login into Caesar 107">
+        <groups>
+            <run>
+                <include name="us107"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="softserve.academy.us107.Story107PositivTest"/>
+            <class name="softserve.academy.us107.Story107NegativTest"/>
+        </classes>
+    </test>
+
+    <test name="as teacher">
+        <parameter name="login" value="sasha"/>
+        <parameter name="password" value="1234"/>
+        <packages>
+            <package name="softserve.academy.admin"/>
+        </packages>
+    </test>
+
+    <test name="as teacher (LocationsMW doubleclick bug)">
+        <parameter name="login" value="sasha"/>
+        <parameter name="password" value="1234"/>
+        <classes>
+            <class name="softserve.academy.teacher.SelectLocationModalWindowTest">
+                <methods>
+                    <include name="cancelChangesWithEscPress"/>
+                    <include name="displayGroupsOfChosenLocationByDoubleClick"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="as teacher (LocationsMW enter bug)">
+        <parameter name="login" value="sasha"/>
+        <parameter name="password" value="1234"/>
+        <classes>
+            <class name="softserve.academy.teacher.SelectLocationModalWindowTest">
+                <methods>
+                    <include name="cancelChangesWithEscPress"/>
+                    <include name="displayGroupsOfChosenLocationsByEnterPress"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="LoginSuccessfully102Test">
+        <classes>
+            <class name="softserve.academy.alexandrTests.LogInSuccessfully102Test"/>
+        </classes>
+    </test>
+
+    <test name="LoginFailure102Test">
+        <classes>
+            <class name="softserve.academy.alexandrTests.IncorrectLogIn102Test"/>
+        </classes>
+    </test>
+
+    <test name="Logout102Test">
+        <classes>
+            <class name="softserve.academy.alexandrTests.LogOut102Test"/>
+        </classes>
+    </test>
+
+    <test name="ProfileDataSection102Test">
+        <classes>
+            <class name="softserve.academy.alexandrTests.ProfileDataSection102Test"/>
+        </classes>
+    </test>
+
+    <test name="Schedule203Test">
+        <classes>
+            <class name="softserve.academy.alexandrTests.CreateSchedule203Test"/>
+        </classes>
+    </test>
+    <test name="navigate and use students page us 3_02">
+        <groups>
+            <run>
+                <include name="smokeStud"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="softserve.academy.Story_3_02.us302NavigateAndUseStudentsPage"/>
+        </classes>
+    </test>
+
+    </suite>

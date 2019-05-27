@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Caesar Regression Suite" verbose="1">
+
+    <test name="aboutpage">
+        <groups>
+            <run>
+                <!--<include name="ordinary"/>-->
+                <include name="about"/>
+            </run>
+        </groups>
+
+        <classes>
+            <!-- Add your class here -->
+            <!--<class name="softserve.academy.Testt"/>-->
+            <class name="softserve.academy.AboutPageTest"/>
+        </classes>
+    </test>
+
+
+</suite>

@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Caesar Regression Suite" verbose="1" >
+
+    <test name="User Story 2-01">
+
+        <parameter name="login" value="sasha"/>
+        <parameter name="password" value="1234"/>
+
+        <groups>
+            <run>
+                <include name="userStory201"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="softserve.academy.Story201Test"/>
+        </classes>
+    </test>
+
+</suite>

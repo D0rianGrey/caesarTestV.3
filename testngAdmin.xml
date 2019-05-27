@@ -1,0 +1,57 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Caesar Regression Suite" verbose="1" >
+
+    <test name="navigate and use students page us 3_02">
+        <groups>
+            <run>
+                <include name="smokeStud"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="softserve.academy.Story_3_02.us302NavigateAndUseStudentsPage"/>
+        </classes>
+    </test>
+
+
+    <!--<test name="EditStudentsList">-->
+        <!--<groups>-->
+            <!--<run>-->
+                <!--<include name="createStudentsList"/>-->
+                <!--<include name="deleteStudentsList"/>-->
+            <!--</run>-->
+            <!--<dependencies>-->
+                <!--<group name="deleteStudentsList" depends-on="createStudentsList"/>-->
+            <!--</dependencies>-->
+        <!--</groups>-->
+
+
+        <!--<classes>-->
+            <!--<class name="softserve.academy.Story_3_02.us302createStudentRecord"/>-->
+            <!--<class name="softserve.academy.Story_3_02.us302deleteStudentRecord"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+    <test name="Admin">
+        <groups>
+            <run>
+                <include name="ordinaryAdmin"/>
+                <include name="admin"/>
+
+            </run>
+            <dependencies>
+                <group name="funcCreate" depends-on="smoke" />
+
+            </dependencies>
+        </groups>
+
+
+        <classes>
+            <class name="softserve.academy.AdminTests.AdminSmokeTest"/>
+            <class name="softserve.academy.AdminTests.AdminCreateTest"/>
+
+        </classes>
+    </test>
+
+</suite>

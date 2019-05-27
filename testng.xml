@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Caesar Regression Suite" verbose="1" >
+
+    <test name="107">
+        <groups>
+            <run>
+                <include name="login"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="softserve.academy.us303.AsCoordinatorEditStudent"/>
+            <!--<class name="softserve.academy.us107.Story107NegativTest"/>-->
+        </classes>
+    </test>
+
+</suite>
